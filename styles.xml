@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<synth>
+    <!-- Estilo para botones -->
+    <style id="buttonStyle">
+        <insets top="5" left="5" bottom="5" right="5"/>
+        <state>
+            <color value="#FFFFFF"/>
+            <background color="#4285F4"/>
+            <font name="Arial" size="14"/>
+        </state>
+        <state value="mouse_over">
+            <color value="#FFFFFF"/>
+            <background color="#3367D6"/>
+        </state>
+        <state value="pressed">
+            <color value="#FFFFFF"/>
+            <background color="#2A4C85"/>
+        </state>
+    </style>
+</synth>
