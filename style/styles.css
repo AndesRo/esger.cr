@@ -1,0 +1,170 @@
+/* Estilos generales */
+
+/* Estilos para la sección Quiénes Somos */
+#quienes-somos {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Estilos para los encabezados */
+#quienes-somos h2 {
+    color: #333; /* Cambia el color del texto del encabezado a negro */
+    font-size: 24px; /* Cambia el tamaño del texto del encabezado */
+    text-align: center; /* Centra el texto del encabezado */
+    margin-bottom: 20px; /* Añade un espacio inferior para separarlo del párrafo siguiente */
+}
+
+/* Estilos para los párrafos */
+#quienes-somos p {
+    color: #666; /* Cambia el color del texto del párrafo a gris */
+    font-size: 18px; /* Cambia el tamaño del texto del párrafo */
+    line-height: 1.6; /* Ajusta el interlineado del párrafo */
+    text-align: justify; /* Justifica el texto del párrafo */
+    margin-bottom: 20px; /* Añade un espacio inferior para separar los párrafos */
+}
+
+/* styles.css */
+
+/* Estilos para los formularios */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Estilos para etiquetas */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Estilos para inputs de texto */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para botones */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para el formulario de registro */
+#formulario-registro {
+    text-align: center; /* Centra el contenido del formulario */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c831b;
+    color: #444;
+    line-height: 1.6;
+}
+
+header {
+    background-color:#1c831b ;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 38px;
+    margin: 0;
+}
+
+nav {
+    background-color: rgb(43, 44, 38);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #1c831b;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    background-color: #1c831b;
+    color: white;
+    padding: 20px 0;
+}
+
+/* styles.css */
+
+/* Estilo para el botón de audio */
+#audio-player audio {
+    display: inline-block;
+    width: 50%;
+    margin: 20px auto;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#audio-player audio:hover {
+    background-color: #45a049;
+}
+
+
+/* Media consulta para pantallas de hasta 768px (dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        padding: 5px 0;
+    }
+
+    nav a {
+        margin: 0 5px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
