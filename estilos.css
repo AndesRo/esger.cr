@@ -138,7 +138,7 @@ footer .social-media img {
     width: 30px;
 }
 
-/* Media Queries */
+/* Media Queries para tablets y dispositivos pequeños */
 @media (max-width: 800px) {
     .gallery img, .video-gallery iframe {
         width: 100%;
@@ -146,6 +146,7 @@ footer .social-media img {
     }
 }
 
+/* Media Queries para dispositivos móviles */
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
@@ -162,22 +163,39 @@ footer .social-media img {
     }
 }
 
+/* Ajustes específicos para dispositivos móviles como Samsung A54 */
 @media (max-width: 414px) {
-    /* Ajustes para dispositivos como Samsung A54 */
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 8px 16px;
+    }
+
+    nav a {
+        padding: 10px 16px;
+    }
+
     .container {
         padding: 10px;
     }
 
     .activity-item, .event-item {
-        width: calc(100% - 20px); /* Ajuste para ocupar todo el ancho disponible */
+        padding: 10px;
     }
 
-    .gallery img {
-        width: calc(100% - 20px); /* Ajuste para ocupar todo el ancho disponible */
+    .gallery-item p {
+        font-size: 12px;
     }
 
-    .video-gallery iframe {
-        width: calc(100% - 20px); /* Ajuste para ocupar todo el ancho disponible */
-        height: 200px; /* Altura fija para los videos en dispositivos móviles */
+    footer {
+        padding: 16px 0;
+    }
+
+    footer .social-media img {
+        height: 25px;
+        width: 25px;
     }
 }
