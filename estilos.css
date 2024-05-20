@@ -91,13 +91,24 @@ footer {
     .container {
         padding: 10px;
     }
-}
-/* Dentro de tu archivo CSS, agrega estas reglas dentro de la media query para dispositivos móviles */
-@media (max-width: 600px) {
+
     /* Ajustar el ancho de la imagen para dispositivos móviles */
     #inicio img {
         width: 100%; /* La imagen ocupará todo el ancho del contenedor padre */
         height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    }
+
+    /* Video gallery adjustments for mobile */
+    .video-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-gallery iframe {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height to maintain aspect ratio */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport */
     }
 }
 
@@ -108,6 +119,7 @@ footer {
     gap: 15px;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto; /* Center the gallery */
 }
 
 .gallery-item {
@@ -120,6 +132,7 @@ footer {
     object-fit: cover;
     border-radius: 8px;
 }
+
 /* Estilo para el fondo difuminado */
 .background {
     position: fixed;
@@ -129,12 +142,13 @@ footer {
     height: 100%;
     background-image: url(imagenes/—Pngtree—climate.png); /* Cambia la ruta por la de tu imagen */
     background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-position: right top; /* Centra la imagen en el contenedor */
+    background-position: center; /* Centers the image */
     backdrop-filter: blur(5px); /* Aplica un efecto de desenfoque al fondo */
     z-index: -1; /* Coloca el fondo detrás del contenido principal */
 }
-/* Estilo para el logo */
+
+/* Correcting header image size */
 header img {
-    height: 0px; /* Ajusta la altura del logo */
-    margin-right: 40px; /* Ajusta el margen derecho para mover el logo hacia la derecha */
+    height: 50px; /* Ajusta la altura del logo */
+    margin-right: 20px; /* Ajusta el margen derecho para mover el logo hacia la derecha */
 }
