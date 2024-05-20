@@ -52,7 +52,7 @@ nav {
 }
 
 footer {
-    background-color: green;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -91,22 +91,23 @@ footer {
     .container {
         padding: 10px;
     }
+
     #contacto a {
-        color: blue; /* Change link color */
-        text-decoration: underline; /* Add underline to link */
+        color: blue; /* Cambia el color del enlace */
+        text-decoration: underline; /* Agrega subrayado al enlace */
     }
-    
+
     #contacto a:hover {
-        color: darkblue; /* Change color on hover */
+        color: darkblue; /* Cambia el color al pasar el cursor */
     }
-    
+
     /* Ajustar el ancho de la imagen para dispositivos móviles */
     #inicio img {
         width: 100%; /* La imagen ocupará todo el ancho del contenedor padre */
         height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
     }
 
-    /* Video gallery adjustments for mobile */
+    /* Ajustes para la galería de videos en dispositivos móviles */
     .video-gallery {
         display: flex;
         flex-direction: column;
@@ -114,9 +115,9 @@ footer {
     }
 
     .video-gallery iframe {
-        width: 100%; /* Full width on mobile */
-        height: auto; /* Auto height to maintain aspect ratio */
-        max-width: 100%; /* Ensure it doesn't exceed the viewport */
+        width: 100%; /* Ancho completo en dispositivos móviles */
+        height: auto; /* Altura automática para mantener la proporción */
+        max-width: 100%; /* Asegura que no exceda el ancho de la ventana gráfica */
     }
 }
 
@@ -127,7 +128,7 @@ footer {
     gap: 15px;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Center the gallery */
+    margin: 0 auto; /* Centra la galería */
 }
 
 .gallery-item {
@@ -149,20 +150,96 @@ footer {
     width: 100%;
     height: 100%;
     background-image: url(imagenes/earth_day.jpg); /* Cambia la ruta por la de tu imagen */
-    background-size: contain; /* Ensure the image size is suitable */
+    background-size: contain; /* Asegura que el tamaño de la imagen sea adecuado */
     background-repeat: no-repeat;
-    background-position: center center; /* Center the image */
-    opacity: 0.1; /* Adjust opacity for watermark effect */
+    background-position: center center; /* Centra la imagen */
+    opacity: 0.1; /* Ajusta la opacidad para el efecto de marca de agua */
     z-index: -1; /* Coloca el fondo detrás del contenido principal */
 }
-/* Estilo para el logo */
-header img {
-    height: auto; /* Ajusta la altura del logo */
-    margin-right: 0; /* Ajusta el margen derecho */
+/* Estilos específicos para la sección de eventos */
+#eventos-container {
+    display: flex;
+    justify-content: center;
 }
 
-/* Correcting header image size */
-header img {
-    height: 50px; /* Ajusta la altura del logo */
-    margin-right: 20px; /* Ajusta el margen derecho para mover el logo hacia la derecha */
+#eventos {
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+    padding: 20px;
+    margin-top: 20px; /* Espacio entre la sección de eventos y otras secciones */
+    background-color: #f9f9f9; /* Color de fondo de la caja flexible */
+    border-radius: 8px; /* Bordes redondeados para la caja flexible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la caja flexible */
+}
+/* Estilos específicos para la sección de actividades */
+#actividades-container {
+    display: flex;
+    justify-content: center;
+}
+
+#actividades {
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+    padding: 20px;
+    margin-top: 20px; /* Espacio entre la sección de actividades y otras secciones */
+    background-color: #f9f9f9; /* Color de fondo de la caja flexible */
+    border-radius: 8px; /* Bordes redondeados para la caja flexible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la caja flexible */
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.activity-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.activity-item h3 {
+    margin-top: 0;
+}
+
+.activity-item p {
+    margin-bottom: 0;
+}
+
+#temas-container {
+    display: flex;
+    justify-content: center;
+}
+
+#temas {
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+    padding: 20px;
+    margin-top: 20px; /* Espacio entre la sección de temas de interés y otras secciones */
+    background-color: #f9f9f9; /* Color de fondo de la caja flexible */
+    border-radius: 8px; /* Bordes redondeados para la caja flexible */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la caja flexible */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
