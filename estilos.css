@@ -91,7 +91,15 @@ footer {
     .container {
         padding: 10px;
     }
-
+    #contacto a {
+        color: blue; /* Change link color */
+        text-decoration: underline; /* Add underline to link */
+    }
+    
+    #contacto a:hover {
+        color: darkblue; /* Change color on hover */
+    }
+    
     /* Ajustar el ancho de la imagen para dispositivos móviles */
     #inicio img {
         width: 100%; /* La imagen ocupará todo el ancho del contenedor padre */
@@ -140,11 +148,17 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(imagenes/—Pngtree—climate.png); /* Cambia la ruta por la de tu imagen */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centers the image */
-    backdrop-filter: blur(5px); /* Aplica un efecto de desenfoque al fondo */
+    background-image: url(imagenes/earth_day.jpg); /* Cambia la ruta por la de tu imagen */
+    background-size: contain; /* Ensure the image size is suitable */
+    background-repeat: no-repeat;
+    background-position: center center; /* Center the image */
+    opacity: 0.1; /* Adjust opacity for watermark effect */
     z-index: -1; /* Coloca el fondo detrás del contenido principal */
+}
+/* Estilo para el logo */
+header img {
+    height: auto; /* Ajusta la altura del logo */
+    margin-right: 0; /* Ajusta el margen derecho */
 }
 
 /* Correcting header image size */
