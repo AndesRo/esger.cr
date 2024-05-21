@@ -52,7 +52,7 @@ nav {
 }
 
 footer {
-    background-color: #333;
+    background-color: green;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -91,23 +91,22 @@ footer {
     .container {
         padding: 10px;
     }
-
     #contacto a {
-        color: blue; /* Cambia el color del enlace */
-        text-decoration: underline; /* Agrega subrayado al enlace */
+        color: blue; /* Change link color */
+        text-decoration: underline; /* Add underline to link */
     }
-
+    
     #contacto a:hover {
-        color: darkblue; /* Cambia el color al pasar el cursor */
+        color: darkblue; /* Change color on hover */
     }
-
+    
     /* Ajustar el ancho de la imagen para dispositivos móviles */
     #inicio img {
         width: 100%; /* La imagen ocupará todo el ancho del contenedor padre */
         height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
     }
 
-    /* Ajustes para la galería de videos en dispositivos móviles */
+    /* Video gallery adjustments for mobile */
     .video-gallery {
         display: flex;
         flex-direction: column;
@@ -115,20 +114,20 @@ footer {
     }
 
     .video-gallery iframe {
-        width: 100%; /* Ancho completo en dispositivos móviles */
-        height: auto; /* Altura automática para mantener la proporción */
-        max-width: 100%; /* Asegura que no exceda el ancho de la ventana gráfica */
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Auto height to maintain aspect ratio */
+        max-width: 100%; /* Ensure it doesn't exceed the viewport */
     }
 }
 
 /* Estilos específicos para la galería de imágenes */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Increase min width to 250px */
+    gap: 20px; /* Increase gap between items */
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /* Centra la galería */
+    margin: 0 auto; /* Center the gallery */
 }
 
 .gallery-item {
@@ -137,7 +136,7 @@ footer {
 
 .gallery img {
     width: 100%;
-    height: 200px;
+    height: 300px; /* Increase height to 300px */
     object-fit: cover;
     border-radius: 8px;
 }
@@ -150,96 +149,147 @@ footer {
     width: 100%;
     height: 100%;
     background-image: url(imagenes/earth_day.jpg); /* Cambia la ruta por la de tu imagen */
-    background-size: contain; /* Asegura que el tamaño de la imagen sea adecuado */
+    background-size: contain; /* Ensure the image size is suitable */
     background-repeat: no-repeat;
-    background-position: center center; /* Centra la imagen */
-    opacity: 0.1; /* Ajusta la opacidad para el efecto de marca de agua */
+    background-position: center center; /* Center the image */
+    opacity: 0.1; /* Adjust opacity for watermark effect */
     z-index: -1; /* Coloca el fondo detrás del contenido principal */
 }
-/* Estilos específicos para la sección de eventos */
-#eventos-container {
+
+/* Correcting header image size */
+header img {
+    height: 50px; /* Ajusta la altura del logo */
+    margin-right: 20px; /* Ajusta el margen derecho para mover el logo hacia la derecha */
+}
+
+/* Estilos para contenedores de actividades y eventos */
+.activities-container, .events-container {
+    background-color: #f4f4f4; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    margin: 20px 0; /* Vertical margin */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.activity-grid, .event-grid {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
 }
 
-#eventos {
-    width: 100%;
-    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
-    padding: 20px;
-    margin-top: 20px; /* Espacio entre la sección de eventos y otras secciones */
-    background-color: #f9f9f9; /* Color de fondo de la caja flexible */
-    border-radius: 8px; /* Bordes redondeados para la caja flexible */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la caja flexible */
-}
-/* Estilos específicos para la sección de actividades */
-#actividades-container {
-    display: flex;
-    justify-content: center;
+.activity-item, .event-item {
+    background-color: white; /* White background for items */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Inner padding */
+    flex: 1 1 calc(33.333% - 40px); /* Flexible basis for items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-#actividades {
-    width: 100%;
-    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
-    padding: 20px;
-    margin-top: 20px; /* Espacio entre la sección de actividades y otras secciones */
-    background-color: #f9f9f9; /* Color de fondo de la caja flexible */
-    border-radius: 8px; /* Bordes redondeados para la caja flexible */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la caja flexible */
-}
-
-.activity-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.activity-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.activity-item h3 {
+.activity-item h3, .event-item h3 {
     margin-top: 0;
 }
 
-.activity-item p {
-    margin-bottom: 0;
+/* Ensuring layout looks good on mobile */
+@media (max-width: 768px) {
+    .activity-item, .event-item {
+        flex: 1 1 calc(50% - 20px); /* Two items per row on tablets */
+    }
 }
 
-#temas-container {
+@media (max-width: 480px) {
+    .activity-item, .event-item {
+        flex: 1 1 100%; /* One item per row on small screens */
+    }
+}
+
+/* Estilos para la sección de suscripción */
+#suscripcion {
+    text-align: center;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.subscription-form {
     display: flex;
     justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-#temas {
-    width: 100%;
-    max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
-    padding: 20px;
-    margin-top: 20px; /* Espacio entre la sección de temas de interés y otras secciones */
-    background-color: #f9f9f9; /* Color de fondo de la caja flexible */
-    border-radius: 8px; /* Bordes redondeados para la caja flexible */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para la caja flexible */
+.subscription-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+subscription-form button {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-.gallery-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.subscription-form button:hover {
+    background-color: darkgreen;
+}
+
+/* Estilos para la sección 'Quiénes Somos' */
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.gallery img {
+.about-us img {
     width: 100%;
-    height: auto;
+    max-width: 800px; /* Aumenta el ancho máximo de la imagen */
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+}
+/* Estilos para la sección 'Quiénes Somos' */
+#inicio {
+    text-align: center; /* Centra el texto */
+}
+
+#inicio h2 {
+    margin-bottom: 20px; /* Añade espacio inferior para separar del contenido */
+}
+/* Estilos para la sección 'Temas de interés' */
+#temas {
+    text-align: center; /* Centra el texto */
+}
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-media img {
+    height: 30px;
+    width: 30px;
+}
+/* Estilos para la sección de videos */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.video-item iframe {
+    width: 100%;
+    height: 100%;
 }

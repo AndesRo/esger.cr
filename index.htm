@@ -26,13 +26,16 @@
     </nav>
     <div class="container">
         <section id="inicio">
-            <h2>Quienes Somos</h2>
-            <p>Nos dedicamos a la conservación y protección del medio ambiente a través de diversas actividades y eventos educativos.</p>
-            <p>Nuestra misión es fomentar la conciencia ambiental y promover prácticas sostenibles para asegurar un futuro saludable para nuestro planeta y las generaciones futuras.</p>
-            <img src="imagenes/voluntarios.jpg" alt="Voluntarios trabajando en proyectos de conservación" width="715">
+            <h2>Quiénes Somos</h2>
+            <div class="about-us">
+                <p>Nos dedicamos a la conservación y protección del medio ambiente a través de diversas actividades y eventos educativos.</p>
+                <p>Nuestra misión es fomentar la conciencia ambiental y promover prácticas sostenibles para asegurar un futuro saludable para nuestro planeta y las generaciones futuras.</p>
+                <img src="imagenes/voluntarios.jpg" alt="Nuestra Misión">
+            </div>
         </section>
         
-        <div id="actividades-container">
+        <!-- Sección de actividades dentro del contenedor -->
+        <div class="activities-container">
             <section id="actividades">
                 <h2>Actividades</h2>
                 <div class="activity-grid">
@@ -51,7 +54,10 @@
                 </div>
             </section>
         </div>
-        <div id="eventos-container">
+        <!-- Fin de la sección de actividades dentro del contenedor -->
+
+        <!-- Sección de eventos dentro del contenedor -->
+        <div class="events-container">
             <section id="eventos">
                 <h2>Eventos</h2>
                 <div class="event-grid">
@@ -70,6 +76,8 @@
                 </div>
             </section>
         </div>
+        <!-- Fin de la sección de eventos dentro del contenedor -->
+
         <section id="temas">
             <h2>Temas de interés</h2>
             <div class="gallery">
@@ -97,24 +105,58 @@
                     <img src="imagenes/TOR.jpg" alt="Conservación Marina">
                     <p>Conservación Marina: Importancia de proteger los océanos y sus ecosistemas.</p>
                 </div>
+                <div class="gallery-item">
+                    <img src="imagenes/fiu.jpg" alt="Conservación Humedales">
+                    <p>Humedales: La conservación de los humedales es crucial para mantener la biodiversidad y regular el ciclo del agua. Estos ecosistemas proporcionan hábitats vitales para una amplia variedad de especies de plantas y animales, además de ofrecer servicios ecosistémicos indispensables para las comunidades locales, como la regulación del clima, la recarga de acuíferos y la protección contra inundaciones.</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="imagenes/ewaste.jpeg" alt="Residuos electronicos">
+                    <p>Residuos electronicos: La gestión adecuada de los residuos electrónicos es esencial para prevenir la contaminación del suelo, agua y aire, así como para recuperar recursos valiosos. Los desechos electrónicos, como teléfonos móviles, computadoras y electrodomésticos, contienen materiales tóxicos y metales preciosos que deben ser tratados y reciclados de manera responsable para reducir su impacto ambiental y promover una economía circular.</p>
+                </div>
             </div>
         </section>
         <section id="videos">
             <h2>Videos relacionados</h2>
             <div class="video-gallery">
-                <iframe width="560" height="315" src="videos/El cambio climático.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="videos/cambio climatico 2.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="videos/cambio climatico 3.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               
+                <div class="video-item">
+                    <iframe width="560" height="315" src="videos/El cambio climático.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                </div>
+                <div class="video-item">
+                    <iframe width="560" height="315" src="videos/cambio climatico 2.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                   
+                </div>
+                <div class="video-item">
+                    <iframe width="560" height="315" src="videos/cambio climatico 3.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    
+                </div>
             </div>
         </section>
+        
+        
+        <!-- Sección de suscripción -->
+        <section id="suscripcion">
+            <h2>Suscríbete</h2>
+            <form class="subscription-form">
+                <input type="email" placeholder="Ingresa tu correo electrónico" required>
+                <button type="submit">Suscríbete ahora</button>
+            </form>
+        </section>
+        <!-- Fin de la sección de suscripción -->
+
         <section id="contacto">
             <p>Puedes contactarnos a través de nuestro correo electrónico: <strong>Contacto@conservacion.org</strong></p><p>Para más información, <a href="https://mma.gob.cl/">pincha aquí</a>.</p>
         </section>
     </div>
-   <footer>
-    <p>&copy; 2024 Organización para la Conservación del Medio Ambiente</p>
-    <p>Programación web1 | tarea 8 | Creado por Andres Romero</p>
-   </footer>
+    <footer>
+        <p>&copy; 2024 Organización para la Conservación del Medio Ambiente</p>
+        <p>Programación web1 | tarea 8 | Creado por Andres Romero</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/climaticocambio/?locale=es_LA" target="_blank"><img src="imagenes/facebook.png" alt="Facebook"></a>
+            <a href="https://www.tiktok.com/discover/cambio-climatico?lang=es" target="_blank"><img src="imagenes/tik-tok.png" alt="Tik-tok"></a>
+            <a href="https://www.instagram.com/onucambioclimatico/reels/" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    
 </body>
 </html>
