@@ -29,22 +29,3 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    var audio = document.getElementById('audioPlayer');
-    var playButton = document.getElementById('playButton');
-    var pauseButton = document.getElementById('pauseButton');
-    
-    // Ocultar los botones de reproducción nativos
-    audio.controls = false;
-
-    // Botón de reproducción
-    playButton.addEventListener('click', function() {
-        audio.play();
-    });
-
-    // Botón de pausa
-    pauseButton.addEventListener('click', function() {
-        audio.pause();
-    });
-
-    
