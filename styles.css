@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #efffc8bf, #6d714d68);
+    color: #333;
+}
+
+body {
+    font-size: 18px; /* Tamaño base del texto */
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamaño del encabezado h1 */
+}
+
+h2 {
+    font-size: 2rem; /* Tamaño del encabezado h2 */
+}
+
+h3 {
+    font-size: 1.75rem; /* Tamaño del encabezado h3 */
+}
+
+p {
+    font-size: 1.25rem; /* Tamaño del párrafo */
+}
+
+/* Otros estilos de texto si es necesario */
+
+/* Cambia el color del texto cuando el mouse está sobre el enlace */
+.nav-item a:hover {
+    color: #545151; /* Cambia el color a tu preferencia */
+}
+
+/* Agrega un efecto de transición suave al cambiar el color del texto */
+.nav-item a {
+    transition: color 0.3s ease; /* Duración y tipo de transición */
+}
+
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-title {
+    width: 450px; /* Ajusta el tamaño del logo según tu preferencia */
+}
+
+
+.bienvenida {
+    background-color: #ebebeb;
+    padding: 50px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateZ(0); /* Truco para mejorar el rendimiento del efecto 3D en algunos navegadores */
+}
+
+.bienvenida h2 {
+    font-size: 2.5rem;
+}
+
+.bienvenida p {
+    font-size: 1.25rem;
+}
+
+.bienvenida .btn {
+    margin-top: 20px;
+}
+
+.servicios-container .col-md-4 {
+    padding: 20px;
+    background-color: #ebebeb;
+    margin-bottom: 20px;
+}
+
+.seccion {
+    background-color: #ebebeb;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d; /* Asegura que los elementos hijos se mantengan en su propio plano 3D */
+}
+
+.row {
+    transform-style: preserve-3d; /* Asegura que los elementos hijos se mantengan en su propio plano 3D */
+}
+
+.contacto-container .tecnico-img img {
+    max-width: 200px !important;
+    height: auto !important;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tecnico-texto p {
+    font-family: 'Montserrat', sans-serif; /* Usando la fuente Montserrat */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: 600; /* Peso de la fuente */
+    color: #555; /* Color del texto */
+    margin-top: 10px; /* Espacio superior */
+}
+
+.galeria img {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.whatsapp-float i {
+    margin-top: 16px;
+}
+.red-social i {
+    color: #808080; /* Cambia el color de los iconos a blanco */
+}
+
+.red-social {
+    color: #808080; /* Cambia el color del texto de las redes sociales a blanco */
+}
+
+
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('imagenes/01.png'); /* Cambia 'tu-imagen.jpg' por el nombre de tu imagen */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1; /* Ajusta la opacidad para lograr el efecto de sello de agua */
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+}
+
+.container, .nav, .seccion, footer, .redes-sociales {
+    position: relative;
+    z-index: 1;
+}
+
+.logo-contacto {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+}
+
+.red-social i {
+    color: #343a40; /* Color oscuro para los íconos de redes sociales */
+}
+
+.red-social span {
+    color: #343a40; /* Color oscuro para el texto de redes sociales */
+}
+
+a.nav-link {
+    color: #343a40; /* Color oscuro para los enlaces de navegación */
+}
+
+a.nav-link:hover {
+    color: #0056b3; /* Color al pasar el cursor por encima */
+}
+
+
+#audioPlayer {
+    width: 100%;
+    max-width: 400px; /* Ajusta el tamaño del reproductor de audio */
+    margin: 0 auto;
+}
+
