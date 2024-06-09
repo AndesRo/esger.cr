@@ -1,14 +1,14 @@
 
 
-/* General styles */
+/* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background: linear-gradient(to bottom right, #e6e8e7, #a9d4ff); /* Fondo con degradado */
     color: #333;
-    position: relative; /* Asegura que el pseudo-elemento ::before se posicione correctamente */
+    position: relative; /* Posición relativa para el pseudo-elemento ::before */
 }
 
-
+/* Pseudo-elemento para sello de agua */
 body::before {
     content: "";
     position: absolute;
@@ -16,43 +16,42 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('img/01.png'); /* Ruta a la imagen del sello de agua */
+    background-image: url('img/01.png'); /* Imagen del sello de agua */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.1; /* Ajusta la opacidad para lograr el efecto de sello de agua */
-    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
+    opacity: 0.1; /* Opacidad para efecto de sello de agua */
+    z-index: -1; /* Posición detrás del contenido */
 }
 
+/* Estilos del encabezado */
 header {
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Navigation styles */
+/* Estilos de la navegación */
 .nav-link {
     font-size: 1.2rem;
     transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #007bff;
+    color: #007bff; /* Cambio de color al pasar el mouse */
 }
 
-/* Estilo para el menú de navegación */
+/* Estilos de los elementos del menú */
 .nav-item {
-    transition: all 0.3s ease; /* Transición suave para todos los elementos del menú */
+    transition: all 0.3s ease; /* Transición suave */
 }
 
 /* Efecto al pasar el mouse sobre los elementos del menú */
 .nav-item:hover {
-    transform: translateY(-3px); /* Desplazamiento hacia arriba al pasar el mouse */
-    color: #007bff; /* Color del texto al pasar el mouse */
+    transform: translateY(-3px); /* Desplazamiento hacia arriba */
+    color: #007bff; /* Cambio de color al pasar el mouse */
 }
 
-
-
-/* Button styles */
+/* Estilos de los botones */
 .btn-primary {
     background-color: #007bff;
     border: none;
@@ -60,10 +59,10 @@ header {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Cambio de color al pasar el mouse */
 }
 
-/* Card styles */
+/* Estilos de las tarjetas */
 .card {
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -71,20 +70,20 @@ header {
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
 }
 
-/* Gallery styles */
+/* Estilos de la galería de imágenes */
 .galeria img {
     cursor: pointer;
     transition: transform 0.3s;
 }
 
 .galeria img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
 }
 
-/* Modal styles */
+/* Estilos del modal */
 .modal {
     display: none;
     position: fixed;
@@ -99,6 +98,7 @@ header {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Estilos del contenido del modal */
 .modal-content {
     margin: auto;
     display: block;
@@ -106,6 +106,7 @@ header {
     max-width: 700px;
 }
 
+/* Estilos del botón de cerrar del modal */
 .cerrar {
     position: absolute;
     top: 15px;
@@ -123,13 +124,14 @@ header {
     cursor: pointer;
 }
 
-/* Footer styles */
+/* Estilos del pie de página */
 footer {
     background-color: #343a40;
     color: #ffffff;
     padding: 1rem;
 }
 
+/* Estilos del botón de WhatsApp flotante */
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -149,19 +151,20 @@ footer {
     margin-top: 16px;
 }
 
-/* Custom styles for tecnico-img and logo */
+/* Estilos para la imagen del técnico */
 .tecnico-img img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
 }
 
+/* Estilos para el logo de contacto */
 .logo-contacto {
-    width: 200px;
+    width: 300px;
     height: auto;
 }
 
-/* Redes sociales */
+/* Estilos para las redes sociales */
 .redes-sociales h2 {
     margin-bottom: 1rem;
 }
@@ -191,36 +194,48 @@ footer {
 }
 
 .red-social:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
 }
 
 .red-social:hover i {
-    color: #007bff;
+    color: #007bff; /* Cambio de color al pasar el mouse */
 }
 
+/* Banner flotante */
 .banner-float {
     position: fixed;
-    bottom: 100px; /* Ajusta este valor para cambiar la posición vertical */
+    bottom: 120px; /* Ajusta este valor para cambiar la posición vertical */
     right: 20px;
-    background-color: #17dc8a;
-    color: #070606;
+    background-color: #46be13;
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
-    border: 2px solid #171717; /* Añadir un borde blanco de 2px */
+    border-radius: 30px; /* Redondea las esquinas */
+    border: 2px solid #615656; /* Borde blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     animation: floatBanner 5s infinite alternate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .banner-float:hover {
-    background-color: #2d4d6f; /* Cambiar color de fondo al pasar el ratón */
+    background-color: #7e93a9; /* Cambiar color de fondo al pasar el ratón */
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
 }
 
+.banner-float i {
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
 
 @keyframes floatBanner {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
     100% {
         transform: translateY(0);

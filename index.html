@@ -35,14 +35,14 @@
     <main class="container">
         <section id="bienvenida" class="bienvenida text-center my-5">
             <div class="contenido-bienvenida">
-                <h2>Bienvenidos</h2>
+                <h2><em>Bienvenidos</em></h2>
                 <p>Ofrecemos una amplia gama de servicios, desde mantenimiento residencial hasta soluciones industriales complejas. Estamos aquí para ayudarte.</p>
             </div>
-            <a href="#servicios" class="btn btn-primary">Conoce nuestros servicios</a>
+            
         </section>
         <div class="banner-float">
             <div class="banner-content">
-                <h2>Contactanos</h2>
+                <h2><em>Contactanos!</em></h2>
             </div>
         </div>
         
@@ -94,7 +94,7 @@
         <hr class="separador">
 
         <section id="proyectos" class="my-5">
-            <h2 class="text-center">Nuestros Proyectos</h2>
+            <h2 class="text-center"><em>Nuestros proyectos</em></h2>
             <div id="galeria" class="galeria row">
                 <div class="col-md-3 mb-4">
                     <img src="img/img-10.jpg" alt="Proyecto 1" class="img-fluid">
@@ -129,7 +129,10 @@
 
         <hr class="separador">
 
+        
+
         <section id="contacto" class="seccion my-5">
+            <h2 class="text-center"><em>Contacto</em></h2>
             <h2 class="text-center"></h2>
             <div class="contacto-container text-center">
                 <div class="contacto-info">
@@ -137,7 +140,7 @@
                         <img src="img/img-9.png" alt="Técnico Eléctrico" class="img-fluid mb-3 shadow rounded-circle">
                     </div>
                     <div class="tecnico-texto">
-                        <p><strong>Carlos Romero Tecnico Autorizado</strong></p>
+                        <p><strong>Tecnico Autorizado</strong></p>
                     </div>
                 </div>
                 <div class="logo-container mb-3">
@@ -147,31 +150,98 @@
             </div>
         </section>
 
-        <section id="contacto" class="seccion my-5">
-            <h2 class="text-center">Cotiza con nosotros</h2>
-            <div class="contacto-container text-center">
-                <form name="contactForm" onsubmit="return validateForm()" method="post">
-                    <div class="form-group">
-                        <label for="nombre">Nombre:</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+        
+         <section id="faq" class="seccion my-5">
+            <h2 class="text-center"><em>Preguntas frecuentes</em></h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="faqHeading1">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                ¿Qué servicios ofrecen?
+                            </button>
+                        </h2>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" class="form-control" id="email" name="email" required>
+                    <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Ofrecemos una amplia gama de servicios de mantenimiento residencial, electricidad, obras menores y más.
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje:</label>
-                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="faqHeading2">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                ¿Cómo puedo solicitar un presupuesto?
+                            </button>
+                        </h2>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+                    <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Puedes solicitar un presupuesto completando el formulario de contacto en nuestra página web o llamándonos directamente.
+                        </div>
+                    </div>
+                </div>
+                <!-- Añadir más preguntas frecuentes aquí -->
             </div>
         </section>
+        
+        
+
+        <section id="cotizacion" class="seccion my-5">
+            <h2 class="text-center"><em>Solicita una cotizacion</em></h2>
+            <div class="contacto-container text-center">
+                <a href="#" id="mostrarFormulario">Pincha aquí para solicitar una cotización</a>
+                <div id="formularioCotizacion" style="display: none;">
+                    <form name="cotizacionForm" onsubmit="return validateCotizacionForm()" method="post">
+                        <div class="form-group">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" class="form-control" id="telefono" name="telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="servicio">Servicio Requerido:</label>
+                            <select class="form-control" id="servicio" name="servicio" required>
+                                <option value="">Seleccionar servicio</option>
+                                <option value="Mantenimiento Residencial">Mantenimiento Residencial</option>
+                                <option value="Electricidad Domiciliaria e Industrial">Electricidad Domiciliaria e Industrial</option>
+                                <option value="Zanjas para canalización subterránea">Zanjas para canalización subterránea</option>
+                                <option value="Obras menores en construcción">Obras menores en construcción</option>
+                                <option value="Lampistería">Otros</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Detalles adicionales:</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Solicitar Cotización</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="ubicacion" class="seccion my-5">
+        <h2 class="text-center"><em>Nuestra ubicacion</em></h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093386!2d144.9537353153197!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727e06b4db1f12!2sEnvato!5e0!3m2!1sen!2sau!4v1618300994528!5m2!1sen!2sau" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+
+        
         
 
 
         <div class="redes-sociales text-center my-5">
-            <h2>Síguenos en nuestras redes sociales</h2>
+            <h2><em>Siguenos en nuestras redes sociales</em></h2>
             <div class="redes-container">
                 <a href="https://facebook.com/tu_pagina" target="_blank" class="red-social mx-2"><i class="fab fa-facebook-f fa-3x text-dark"></i><span>Facebook</span></a>
                 <a href="https://instagram.com/tu_cuenta" target="_blank" class="red-social mx-2"><i class="fab fa-instagram fa-3x text-dark"></i><span>Instagram</span></a>
