@@ -3,25 +3,9 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #e6e8e7, #a9d4ff); /* Fondo con degradado */
+    background: linear-gradient(to bottom right, #ffd8a8, #6a8d70); /* Fondo con degradado */
     color: #333;
     position: relative; /* Posición relativa para el pseudo-elemento ::before */
-}
-
-/* Pseudo-elemento para sello de agua */
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('img/01.png'); /* Imagen del sello de agua */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.1; /* Opacidad para efecto de sello de agua */
-    z-index: -1; /* Posición detrás del contenido */
 }
 
 /* Estilos del encabezado */
@@ -204,11 +188,11 @@ footer {
 /* Banner flotante */
 .banner-float {
     position: fixed;
-    bottom: 120px; /* Ajusta este valor para cambiar la posición vertical */
+    bottom: 119px; /* Ajusta este valor para cambiar la posición vertical */
     right: 20px;
     background-color: #46be13;
     color: #fff;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 30px; /* Redondea las esquinas */
     border: 2px solid #615656; /* Borde blanco */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
@@ -217,7 +201,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 14px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -240,4 +224,71 @@ footer {
     100% {
         transform: translateY(0);
     }
+}
+
+/* Estilos de las preguntas frecuentes */
+.faq-item {
+    margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #007bff;
+}
+
+/* Estilos del formulario de cotización */
+#cotizacion form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.field textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
 }
