@@ -3,7 +3,7 @@
 /* Estilos generales */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom right, #ffd8a8, #6a8d70); /* Fondo con degradado */
+    background: linear-gradient(to bottom right, #d2b795, #48674d); /* Fondo con degradado */
     color: #333;
     position: relative; /* Posición relativa para el pseudo-elemento ::before */
 }
@@ -185,46 +185,6 @@ footer {
     color: #007bff; /* Cambio de color al pasar el mouse */
 }
 
-/* Banner flotante */
-.banner-float {
-    position: fixed;
-    bottom: 119px; /* Ajusta este valor para cambiar la posición vertical */
-    right: 20px;
-    background-color: #46be13;
-    color: #fff;
-    padding: 5px 10px;
-    border-radius: 30px; /* Redondea las esquinas */
-    border: 2px solid #615656; /* Borde blanco */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    animation: floatBanner 5s infinite alternate;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.banner-float:hover {
-    background-color: #7e93a9; /* Cambiar color de fondo al pasar el ratón */
-    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
-}
-
-.banner-float i {
-    margin-right: 10px; /* Espacio entre el icono y el texto */
-}
-
-@keyframes floatBanner {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 
 /* Estilos de las preguntas frecuentes */
 .faq-item {
@@ -242,53 +202,112 @@ footer {
     border-left: 2px solid #007bff;
 }
 
-/* Estilos del formulario de cotización */
-#cotizacion form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* formulario */
+
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm fieldset,
+#fs-frm optgroup,
+#fs-frm label,
+#fs-frm #card-element:disabled {
+  font-family: inherit;
+  font-size: 100%;
+  color: inherit;
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#fs-frm label,
+#fs-frm legend,
+#fs-frm ::placeholder {
+  font-size: .825rem;
+  margin-bottom: .5rem;
+  padding-top: .2rem;
+  display: flex;
+  align-items: baseline;
 }
 
-.field {
-    margin-bottom: 20px;
+/* borde, relleno, margen, ancho */
+#fs-frm input,
+#fs-frm select,
+#fs-frm textarea,
+#fs-frm #card-element {
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(255,255,255,0.9);
+  padding: .75em 1rem;
+  margin-bottom: 1.5rem;
+}
+#fs-frm input:focus,
+#fs-frm select:focus,
+#fs-frm textarea:focus {
+  background-color: white;
+  outline-style: solid;
+  outline-width: thin;
+  outline-color: gray;
+  outline-offset: -1px;
+}
+#fs-frm [type="text"],
+#fs-frm [type="email"] {
+  width: 100%;
+}
+#fs-frm [type="button"],
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  width: auto;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+#fs-frm [type="button"]:focus,
+#fs-frm [type="submit"]:focus,
+#fs-frm [type="reset"]:focus {
+  outline: none;
+}
+#fs-frm [type="submit"],
+#fs-frm [type="reset"] {
+  margin-bottom: 0;
+}
+#fs-frm select {
+  text-transform: none;
 }
 
-.field label {
-    display: block;
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
+#fs-frm [type="checkbox"] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+  display: inline-block;
+  width: auto;
+  margin: 0 .5em 0 0 !important;
 }
 
-.field input,
-.field textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#fs-frm [type="radio"] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
 }
 
-.field textarea {
-    resize: vertical;
+/* dirección, localidad */
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  display: inline;
 }
-
-input[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+#fs-frm fieldset.locale input[name="city"] {
+  width: 52%;
 }
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
+#fs-frm fieldset.locale select[name="state"],
+#fs-frm fieldset.locale input[name="postal-code"] {
+  width: 20%;
+}
+#fs-frm fieldset.locale input[name="city"],
+#fs-frm fieldset.locale select[name="state"] {
+  margin-right: 3%;
 }

@@ -20,27 +20,6 @@ watermark.style.opacity = 0.1;
 watermark.style.zIndex = -1;
 body.appendChild(watermark);
 
-// Mostrar y ocultar el formulario de cotización
-document.getElementById('mostrarFormulario').addEventListener('click', function(e) {
-    e.preventDefault();
-    var formulario = document.getElementById('formularioCotizacion');
-    if (formulario.style.display === 'none') {
-        formulario.style.display = 'block';
-    } else {
-        formulario.style.display = 'none';
-    }
-});
-
-// Validación del formulario de cotización
-function validateCotizacionForm() {
-    var nombre = document.forms['cotizacionForm']['nombre'].value;
-    var email = document.forms['cotizacionForm']['_replyto'].value;
-    if (nombre == '' || email == '') {
-        alert('Por favor, completa los campos requeridos.');
-        return false;
-    }
-    return true;
-}
 
 // Modal para la galería de imágenes
 var modal = document.getElementById("modal");
@@ -68,10 +47,6 @@ document.querySelectorAll('.faq-item h3').forEach((question) => {
             answer.style.display = 'block';
         }
     });
-});
-
-document.getElementById('banner').addEventListener('click', function() {
-    this.style.display = 'none'; // Oculta el banner al hacer clic en él
 });
 
 
