@@ -57,15 +57,7 @@ header {
     transform: translateY(-10px); /* Efecto de elevación al pasar el mouse */
 }
 
-/* Estilos de la galería de imágenes */
-.galeria img {
-    cursor: pointer;
-    transition: transform 0.3s;
-}
 
-.galeria img:hover {
-    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
-}
 
 /* Estilos del modal */
 .modal {
@@ -185,22 +177,58 @@ footer {
     color: #007bff; /* Cambio de color al pasar el mouse */
 }
 
-
-/* Estilos de las preguntas frecuentes */
-.faq-item {
-    margin-bottom: 1rem;
+/*preguntas frecuentes*/
+#faqs {
+    background: #f9f9f9;
+    padding: 40px 0;
 }
 
-.faq-item h3 {
+.accordion .faq-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accordion .faq-header {
+    padding: 10px 20px;
     cursor: pointer;
+    background: #85b172;
+    color: #fff;
+    border-radius: 5px 5px 0 0;
 }
 
-.faq-answer {
-    display: none;
-    margin-top: 0.5rem;
-    padding-left: 1rem;
-    border-left: 2px solid #007bff;
+.accordion .faq-header h2 {
+    margin: 0;
 }
+
+.accordion .faq-header button {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.accordion .faq-header button:hover,
+.accordion .faq-header button:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+.accordion .faq-body {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.accordion .faq-body p {
+    margin: 0;
+}
+
 
 /* formulario */
 
@@ -294,20 +322,131 @@ footer {
   appearance: radio;
 }
 
-/* dirección, localidad */
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  display: inline;
+
+
+
+
+/*galeria de imagenes*/
+#proyectos {
+    background: #f9f9f9;
+    padding: 40px 0;
 }
-#fs-frm fieldset.locale input[name="city"] {
-  width: 52%;
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
 }
-#fs-frm fieldset.locale select[name="state"],
-#fs-frm fieldset.locale input[name="postal-code"] {
-  width: 20%;
+
+.project-item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-#fs-frm fieldset.locale input[name="city"],
-#fs-frm fieldset.locale select[name="state"] {
-  margin-right: 3%;
+
+.project-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-item:hover img {
+    transform: scale(1.1);
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay h5 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 14px;
+}
+/* Estilos del modal */
+.modal {
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed; /* Fijar la posición del modal */
+    z-index: 1000; /* Asegurarse de que el modal esté en el frente */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9); /* Color de fondo con opacidad */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content, .caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
 }

@@ -1,6 +1,4 @@
-// scripts.js
 
-// main.js
 
 // Sello de agua
 const body = document.body;
@@ -21,16 +19,7 @@ watermark.style.zIndex = -1;
 body.appendChild(watermark);
 
 
-// Modal para la galería de imágenes
-var modal = document.getElementById("modal");
-var modalImg = document.getElementById("imgModal");
-var images = document.querySelectorAll(".galeria img");
-images.forEach(function(image) {
-    image.addEventListener("click", function() {
-        modal.style.display = "block";
-        modalImg.src = this.src;
-    });
-});
+
 
 var span = document.getElementsByClassName("cerrar")[0];
 span.onclick = function() {
@@ -61,3 +50,62 @@ function mostrarFechaHora() {
 setInterval(mostrarFechaHora, 1000);
 mostrarFechaHora();
 
+// script.js envio de formulario
+
+const $form = document.querySelector('#fs-frm');
+
+$form.addEventListener('submit', handleSubmit);
+
+async function handleSubmit(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const url = this.action;
+    const method = this.method;
+
+    try {
+        const response = await fetch(url, {
+            method: method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            this.reset();
+            alert('¡Gracias por contactarme!');
+        } else {
+            throw new Error('Error al enviar el formulario');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
+    }
+}
+
+
+// Obtener el modal
+var modal = document.getElementById('modal');
+
+// Obtener la imagen y el contenedor de la imagen dentro del modal
+var modalImg = document.getElementById("imgModal");
+var captionText = document.getElementById("caption");
+
+// Asignar el evento onclick a todas las imágenes del proyecto
+var images = document.getElementsByClassName("project-img");
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+}
+
+// Obtener el elemento <span> que cierra el modal
+var span = document.getElementsByClassName("cerrar")[0];
+
+// Cuando el usuario hace clic en <span> (x), cerrar el modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
