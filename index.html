@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<div id="banner" class="banner">
+    <span class="close-btn" onclick="closeBanner()">&times;</span>
+    <h1>Bienvenido a Esger</h1>
+</div>
+
+
 
 <body>
     <header role="banner" class="bg-white text-dark py-3">
@@ -38,9 +44,9 @@
     <main class="container">
         <section id="bienvenida" class="bienvenida text-center my-5">
             <div class="contenido-bienvenida">
-                <h2><em>Bienvenidos</em></h2>
-                <p>En ESGER, nos dedicamos a ofrecer una amplia gama de servicios de mantenimiento y construcción, diseñados para satisfacer todas las necesidades de nuestros clientes. Nuestro equipo de profesionales altamente calificados está comprometido con la calidad y la satisfacción del cliente en cada proyecto.</p>
-            <p>Con más de 15 años de experiencia en el sector, ESGER se ha consolidado como una empresa líder en el mercado, proporcionando soluciones integrales y personalizadas para hogares, comercios e industrias.</p>
+                <h2><em></em></h2>
+                <p><em>En ESGER, nos dedicamos a ofrecer una amplia gama de servicios de mantenimiento y construcción, diseñados para satisfacer todas las necesidades de nuestros clientes.</em></p>
+            
             </div>
         </section>
 
@@ -109,7 +115,7 @@
                         <div class="overlay">
                             <div class="text">
                                 <h5>Proyecto 1</h5>
-                                <p>Descripción breve del proyecto.</p>
+                                <p>Instalacion luz led cocina</p>
                             </div>
                         </div>
                     </div>
@@ -215,20 +221,6 @@
                 <div class="faq-item">
                     <div class="faq-header" id="faqHeading1">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                                ¿Qué servicios ofrece ESGER?
-                            </button>
-                        </h2>
-                    </div>
-                    <div id="faq1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#accordionFAQs">
-                        <div class="faq-body">
-                            Ofrecemos una amplia gama de servicios de mantenimiento y construcción, incluyendo reparaciones, remodelaciones, instalaciones eléctricas, plomería, y más.
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header" id="faqHeading2">
-                        <h2 class="mb-0">
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
                                 ¿Cómo puedo solicitar una cotización?
                             </button>
@@ -313,11 +305,21 @@
                 </div>
                 <div class="col-md-8">
                     <h3>Carlos Romero</h3>
-                    <p>Carlos es nuestro técnico principal con más de 10 años de experiencia en mantenimiento residencial y servicios eléctricos. Cuenta con certificación SEC, lo que garantiza que cumple con todas las normativas y estándares de seguridad exigidos por la Superintendencia de Electricidad y Combustibles de Chile.</p>
-                    <p>Su compromiso con la calidad y la seguridad en cada proyecto asegura a nuestros clientes servicios confiables y de alta calidad. Juan se especializa en instalaciones eléctricas complejas, mantenimiento preventivo y correctivo, y en la implementación de soluciones energéticas eficientes.</p>
-                    <p><strong>Email:</strong> juan.perez@example.com</p>
-                    <p><strong>Teléfono:</strong> +56 9 1234 5678</p>
+                    <p>Tecnico Autorizado SEC</p>
+                
+                        <strong><i class="fas fa-envelope"></i> Email:</strong> <!-- Icono de correo -->
+                        <a href="mailto:juan.perez@example.com">esgerspa@gmail.com</a>
+                    </p>
+                    <p>
+                        <strong><i class="fas fa-phone"></i> Teléfono:</strong> <!-- Icono de teléfono -->
+                        <a href="tel:+56912345678">+56 9 1234 5678</a>
+                    </p>
                 </div>
+                
+                <div class="col-md-4 text-center">
+                    <img src="img/img-3.png" alt="Logo de certificación" class="img-fluid mb-3 certification-logo" style="max-width: 200px;">
+                </div>
+                
             </div>
         </section>
 
@@ -347,7 +349,9 @@
         <img class="modal-content" id="imgModal">
     </div>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js"></script> 
+    
+    
 
  <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
