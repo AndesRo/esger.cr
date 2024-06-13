@@ -1,26 +1,30 @@
 const body = document.body;
 body.style.position = 'relative';
 
-const watermark1 = createWatermark();
-const watermark2 = createWatermark();
-const watermark3 = createWatermark();
+const createWatermarkImage = (url) => {
+    const img = document.createElement('div');
+    img.style.position = 'absolute';
+    img.style.top = 0;
+    img.style.left = 0;
+    img.style.width = '100%';
+    img.style.height = '100%';
+    img.style.backgroundImage = `url(${url})`;
+    img.style.backgroundSize = 'contain';
+    img.style.backgroundRepeat = 'repeat';
+    img.style.opacity = 0.1; // Opacidad del sello de agua (0.1 para que sea sutil)
+    img.style.zIndex = -1; // Asegura que el sello de agua esté detrás de otros elementos
+    return img;
+};
 
-function createWatermark() {
-    const watermark = document.createElement('div');
-    watermark.style.position = 'absolute';
-    watermark.style.top = 0;
-    watermark.style.left = 0;
-    watermark.style.width = '100%';
-    watermark.style.height = '100%';
-    watermark.style.backgroundImage = "url('img/png 2.png')"; // Ruta de la imagen de sello de agua
-    watermark.style.backgroundSize = 'contain';
-    watermark.style.backgroundRepeat = 'no-repeat';
-    watermark.style.backgroundPosition = 'center';
-    watermark.style.opacity = 0.1; // Opacidad del sello de agua (0.1 para que sea sutil)
-    watermark.style.zIndex = -1; // Asegura que el sello de agua esté detrás de otros elementos
-    body.appendChild(watermark);
-    return watermark;
-}
+// Crea tres imágenes de sello de agua
+const watermark1 = createWatermarkImage('img/watermark1.png'); // Ruta de la primera imagen
+const watermark2 = createWatermarkImage('img/img-5.jpg'); // Ruta de la segunda imagen
+const watermark3 = createWatermarkImage('img/watermark3.png'); // Ruta de la tercera imagen
+
+// Añade las imágenes al cuerpo del documento
+body.appendChild(watermark1);
+body.appendChild(watermark2);
+body.appendChild(watermark3);
 
 
 // Modal para la galería de imágenes
@@ -47,17 +51,6 @@ document.querySelectorAll('.faq-item h3').forEach(question => {
         answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
     });
 });
-
-// Mostrar la fecha y hora actual
-function mostrarFechaHora() {
-    const fechaHora = new Date();
-    const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-    const fechaHoraString = fechaHora.toLocaleDateString('es-ES', opciones);
-    document.getElementById('fechaHora').innerHTML = fechaHoraString;
-}
-
-setInterval(mostrarFechaHora, 1000);
-mostrarFechaHora();
 
 // Envío de formulario
 const $form = document.querySelector('#fs-frm');

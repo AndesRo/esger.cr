@@ -16,8 +16,6 @@
     <h1>Bienvenido a Esger</h1>
 </div>
 
-
-
 <body>
     <header role="banner" class="bg-white text-dark py-3">
         <div class="container">
@@ -107,7 +105,7 @@
         <hr class="separador">
 
         <section id="proyectos" class="seccion my-5">
-            <h2 class="text-center"><em>Proyectos Recientes</em></h2>
+            <h2 class="text-center"><em>Nuestros proyectos</em></h2>
             <div class="row galeria">
                 <div class="col-md-4">
                     <div class="project-item">
@@ -216,7 +214,7 @@
 
         
         <section id="faqs" class="my-5">
-            <h2 class="text-center">Preguntas Frecuentes</h2>
+            <h2 class="text-center"><em>Preguntas Frecuentes</em></h2>
             <div class="accordion" id="accordionFAQs">
                 <div class="faq-item">
                     <div class="faq-header" id="faqHeading1">
@@ -301,27 +299,17 @@
             <h2 class="text-center"><em>Contacto</em></h2>
             <div class="row">
                 <div class="col-md-4 text-center">
-                    <img src="img/img-9.png" alt="Foto del técnico" class="img-fluid rounded-circle mb-3" style="max-width: 200px;">
+                    <img src="img/img-9.png" alt="Foto del técnico" class="img-fluid rounded-circle mb-3 tecnico-img">
                 </div>
                 <div class="col-md-8">
-                    <h3>Carlos Romero</h3>
-                    <p>Tecnico Autorizado SEC</p>
-                
-                        <strong><i class="fas fa-envelope"></i> Email:</strong> <!-- Icono de correo -->
-                        <a href="mailto:juan.perez@example.com">esgerspa@gmail.com</a>
-                    </p>
-                    <p>
-                        <strong><i class="fas fa-phone"></i> Teléfono:</strong> <!-- Icono de teléfono -->
-                        <a href="tel:+56912345678">+56 9 1234 5678</a>
-                    </p>
+                    <h2><em>Carlos Romero</em></h2>
+                    <h3>Técnico Autorizado SEC</h3>
+                    <p><i class="fas fa-envelope"></i> <span class="contact-info">Esgerspa@gmail.com</span></p>
+                    <p><i class="fas fa-phone"></i> <span class="contact-info">+56 9 89235286</span></p>
                 </div>
-                
-                <div class="col-md-4 text-center">
-                    <img src="img/img-3.png" alt="Logo de certificación" class="img-fluid mb-3 certification-logo" style="max-width: 200px;">
-                </div>
-                
             </div>
         </section>
+        
 
 
 
@@ -337,13 +325,19 @@
     <footer class="text-center py-4 bg-dark text-white">
         <p>&copy; 2024 Empresa Esger - Todos los derechos reservados - Creado por AndrewRo</p>
         <p id="fechaHora"></p>
+    
+        <!-- Logos de certificación -->
+        <div class="certification-logos">
+            <img src="img/png logo.png" alt="Certificación SEC">
+            <img src="img/sec_cert.png" alt="Energías Renovables">
+        </div>
     </footer>
+    
 
     <a href="https://wa.me/56989235286?text=Hola,%20me%20puede%20dar%20mas%20informacion?" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Modal -->
     <div id="modal" class="modal">
         <span class="cerrar">&times;</span>
         <img class="modal-content" id="imgModal">

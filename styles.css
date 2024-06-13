@@ -8,6 +8,15 @@ body {
     position: relative; /* Posición relativa para el pseudo-elemento ::before */
 }
 
+.bienvenida h2 {
+    font-size: 3em; /* Tamaño del encabezado de bienvenida */
+}
+
+.bienvenida p {
+    font-size: 1.5em; /* Tamaño del texto de bienvenida */
+}
+
+
 /* Estilos del encabezado */
 header {
     background-color: #ffffff;
@@ -186,7 +195,7 @@ footer {
 }
 
 .red-social:hover i {
-    color: #007bff; /* Cambio de color al pasar el mouse */
+    color: #171717; /* Cambio de color al pasar el mouse */
 }
 
 /*preguntas frecuentes*/
@@ -240,6 +249,47 @@ footer {
 .accordion .faq-body p {
     margin: 0;
 }
+
+#faqs {
+    background-color: rgba(255, 255, 255, 0); /* Fondo con transparencia */
+    padding: 20px;
+}
+
+
+/*formulario tecnico*/
+.tecnico-img {
+    width: 200px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 2px solid black; /* Borde negro */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra 3D */
+}
+
+.contact-info {
+    font-size: 1.5em; /* Aumenta el tamaño del texto */
+    margin-left: 10px; /* Espacio entre el icono y el texto */
+}
+
+.fa-envelope, .fa-phone {
+    font-size: 1.5em; /* Aumenta el tamaño de los iconos */
+    color: #333; /* Color de los iconos */
+}
+
+
+.certification-logos {
+    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+}
+
+.certification-logos img {
+    width: 50px; /* Ajustar el tamaño según tus necesidades */
+    margin: 0 11px; /* Espacio lateral entre los logos */
+}
+
+#descripcion-tecnico {
+    font-size: 10px; /* Ajusta el tamaño del texto según tus preferencias */
+    font-weight: bold; /* Opcional: ajusta el peso del texto si es necesario */
+    color: #333; /* Color del texto */
+}
+
 
 
 /* formulario */
@@ -402,6 +452,7 @@ footer {
     font-size: 14px;
 }
 
-
-
+body {
+    position: relative;
+}
 
