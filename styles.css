@@ -4,7 +4,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom right, #d2b795, #48674d); /* Fondo con degradado */
-    color: #333;
+    color: #333333;
     position: relative; /* Posición relativa para el pseudo-elemento ::before */
 }
 
@@ -106,7 +106,7 @@ header {
 
 /* Estilos del pie de página */
 footer {
-    background-color: #343a40;
+    background-color: #364034;
     color: #ffffff;
     padding: 1rem;
 }
@@ -280,7 +280,7 @@ footer {
 }
 
 .certification-logos img {
-    width: 40px; /* Ajustar el tamaño según tus necesidades */
+    width: 50px; /* Ajustar el tamaño según tus necesidades */
     margin: 0 5px; /* Espacio lateral entre los logos */
 }
 
@@ -450,3 +450,31 @@ body {
     position: relative;
 }
 
+
+
+/* el tiempo*/
+
+/* Importar la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'cursiva', sans-serif;
+}
+
+#weather {
+    text-align: right;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#weather-icon {
+    font-size: 40px;
+    color: #9bc8f5; /* Cambia este color al que prefieras */
+}
+
+#weather-description {
+    color: #333; /* Cambia este color al que prefieras */
+    font-size: 1.5 em;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}

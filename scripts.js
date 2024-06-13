@@ -26,74 +26,136 @@ body.appendChild(watermark1);
 body.appendChild(watermark2);
 body.appendChild(watermark3);
 
-
 // Modal para la galería de imágenes
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("imgModal");
 const captionText = document.getElementById("caption");
 
 function abrirModal(element) {
-    modal.style.display = "block";
-    modalImg.src = element.src;
-    captionText.innerHTML = element.alt;
+    if (modal && modalImg && captionText) {
+        modal.style.display = "block";
+        modalImg.src = element.src;
+        captionText.innerHTML = element.alt;
+    }
 }
 
 function cerrarModal() {
-    modal.style.display = "none";
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
 
-document.querySelector(".cerrar").onclick = cerrarModal;
+document.querySelector(".cerrar")?.addEventListener('click', cerrarModal);
 
 // Preguntas Frecuentes
 document.querySelectorAll('.faq-item h3').forEach(question => {
     question.addEventListener('click', () => {
         const answer = question.nextElementSibling;
-        answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        if (answer) {
+            answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+        }
     });
 });
 
 // Envío de formulario
 const $form = document.querySelector('#fs-frm');
 
-$form.addEventListener('submit', async event => {
-    event.preventDefault();
+if ($form) {
+    $form.addEventListener('submit', async event => {
+        event.preventDefault();
 
-    const formData = new FormData($form);
-    const url = $form.action;
-    const method = $form.method;
+        const formData = new FormData($form);
+        const url = $form.action;
+        const method = $form.method;
 
-    try {
-        const response = await fetch(url, {
-            method: method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+        try {
+            const response = await fetch(url, {
+                method: method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                $form.reset();
+                alert('¡Gracias por contactarme!');
+            } else {
+                throw new Error('Error al enviar el formulario');
             }
-        });
-
-        if (response.ok) {
-            $form.reset();
-            alert('¡Gracias por contactarme!');
-        } else {
-            throw new Error('Error al enviar el formulario');
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
         }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
-    }
-});
+    });
+}
 
 // Función para cerrar el banner
 function closeBanner() {
-    var banner = document.getElementById("banner");
-    banner.style.right = "-300px"; // Oculta el banner moviéndolo fuera de la pantalla
+    const banner = document.getElementById("banner");
+    if (banner) {
+        banner.style.right = "-300px"; // Oculta el banner moviéndolo fuera de la pantalla
+    }
 }
 
 // Muestra el banner después de que se cargue la página
 document.addEventListener("DOMContentLoaded", function() {
-    var banner = document.getElementById("banner");
-    banner.style.right = "20px"; // Muestra el banner desplazándolo desde la derecha
+    const banner = document.getElementById("banner");
+    if (banner) {
+        banner.style.right = "20px"; // Muestra el banner desplazándolo desde la derecha
+    }
+
+    // Cierra automáticamente el banner después de 3 segundos
+    setTimeout(closeBanner, 3000);
 });
 
-// Cierra automáticamente el banner después de 3 segundos
-setTimeout(closeBanner, 3000);
+document.addEventListener("DOMContentLoaded", function() {
+    const apiKey = '47442571cbb67ffbbabbbf33efe1d5e1';  // Reemplaza con tu clave de API
+    const city = 'chile';  // Cambia a la ciudad que desees
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=es&units=metric`;
+
+    console.log('Fetching weather data...');
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Weather data:', data);
+            const iconCode = data.weather[0].icon;
+            const description = data.weather[0].description;
+            const iconClass = getWeatherIconClass(iconCode);
+
+            document.getElementById('weather-icon').className = `wi ${iconClass}`;
+            document.getElementById('weather-description').textContent = description;
+        })
+        .catch(error => console.error('Error fetching the weather data:', error));
+});
+
+function getWeatherIconClass(iconCode) {
+    const iconMap = {
+        '01d': 'wi-day-sunny',
+        '01n': 'wi-night-clear',
+        '02d': 'wi-day-cloudy',
+        '02n': 'wi-night-alt-cloudy',
+        '03d': 'wi-cloud',
+        '03n': 'wi-cloud',
+        '04d': 'wi-cloudy',
+        '04n': 'wi-cloudy',
+        '09d': 'wi-showers',
+        '09n': 'wi-showers',
+        '10d': 'wi-day-rain',
+        '10n': 'wi-night-alt-rain',
+        '11d': 'wi-thunderstorm',
+        '11n': 'wi-thunderstorm',
+        '13d': 'wi-snow',
+        '13n': 'wi-snow',
+        '50d': 'wi-fog',
+        '50n': 'wi-fog'
+    };
+
+    return iconMap[iconCode] || 'wi-na';
+}
