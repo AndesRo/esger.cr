@@ -258,9 +258,9 @@ footer {
 
 /*formulario tecnico*/
 .tecnico-img {
-    width: 200px; /* Ajusta el ancho de la imagen */
+    width: 180px; /* Ajusta el ancho de la imagen */
     height: auto; /* Mantiene la proporción de la imagen */
-    border: 2px solid black; /* Borde negro */
+    border: 2px solid rgb(80, 75, 65); /* Borde negro */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra 3D */
 }
 
@@ -280,14 +280,8 @@ footer {
 }
 
 .certification-logos img {
-    width: 50px; /* Ajustar el tamaño según tus necesidades */
-    margin: 0 11px; /* Espacio lateral entre los logos */
-}
-
-#descripcion-tecnico {
-    font-size: 10px; /* Ajusta el tamaño del texto según tus preferencias */
-    font-weight: bold; /* Opcional: ajusta el peso del texto si es necesario */
-    color: #333; /* Color del texto */
+    width: 40px; /* Ajustar el tamaño según tus necesidades */
+    margin: 0 5px; /* Espacio lateral entre los logos */
 }
 
 
