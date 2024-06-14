@@ -458,11 +458,11 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'cursiva', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 #weather {
-    text-align: right;
+    text-align: left;
     margin-top: 10px;
     font-family: 'Roboto', sans-serif;
 }
